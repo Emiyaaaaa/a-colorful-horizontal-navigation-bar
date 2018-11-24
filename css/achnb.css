@@ -1,0 +1,47 @@
+.MyNav ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+}
+
+.MyNav li:not(:last-child) {
+	margin-right: 20px;
+}
+
+.MyNav li {
+    z-index: 1;
+}
+
+.MyNav a {
+	display: block;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+	padding: 7px 15px;
+}
+
+.target {
+	position: absolute;
+	border-bottom: 4px solid transparent;
+	transform: translateX(-60px);
+	-webkit-transform: translateX(-60px);
+	-ms-transform:translateX(-60px);
+	-moz-transform:translateX(-60px);
+	-o-transform:translateX(-60px);
+          
+}
+
+.MyNav a, .target {
+	transition: all .35s ease-in-out;
+	-webkit-transition: all .35s ease-in-out;
+	-ms-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	-o-transition: all .35s ease-in-out;
+}
