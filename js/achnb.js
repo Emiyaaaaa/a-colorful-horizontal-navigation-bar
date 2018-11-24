@@ -1,11 +1,11 @@
 (function () {
 
-  var cn = 0 //click_hli_id_num
+  var cn = 0 //click_hli_id_num. You can set up the first show matter here.
   var target = document.querySelectorAll(".target")[0]
   var target_copy = document.querySelectorAll(".target")[1]
   var links = document.querySelectorAll(".MyNav a")
   var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"]
-  hli_num = cn
+  var hli_num = cn
 
   window.onload = function initializePersonalcenterNav(){
     for (var i = 0; i < links.length; i++) {
@@ -13,7 +13,7 @@
     }
     links[cn].parentNode.classList.add("active")
     links[cn].style.opacity = "1"
-    console.log(links[cn])
+
     var width = links[cn].getBoundingClientRect().width
     var height = links[cn].getBoundingClientRect().height
     var left = links[cn].getBoundingClientRect().left + window.pageXOffset
@@ -64,11 +64,10 @@
       if ( i != cn ) {
         if (links[i].style.opacity == "1"){
           leave_i = i
-          console.log(leave_i)
+
           links[i].style.opacity = "0.25"
           target.style.opacity = 0
           target.addEventListener("mouseenter", function(){
-            console.log("add")
             target.style.opacity = "1"
             links[leave_i].style.opacity = "1"
           })
@@ -132,7 +131,7 @@
 
   window.addEventListener("resize", resizeFunc)
   target.addEventListener('click',openMatter3)
-  document.getElementsByClassName("MyNav")[0].addEventListener("mouseleave",leaveNav)
-  document.getElementsByClassName("MyNav")[0].addEventListener("mouseenter",enterNav)
+  document.getElementById("MyNav").addEventListener("mouseleave",leaveNav)
+  document.getElementById("MyNav").addEventListener("mouseenter",enterNav)
   
 })();
