@@ -1,6 +1,6 @@
 (function () {
 
-  var cn = 0; //click_hli_id_num. You can set up the first show matter here.
+  var cn = 0; //You can set up the first show matter here.
   var target = document.querySelectorAll(".target")[0];
   var target_copy = document.querySelectorAll(".target")[1];
   var links = document.querySelectorAll(".MyNav a");
@@ -88,7 +88,6 @@
     target_copy.style.borderColor = target.style.borderColor;
     target_copy.style.transform = target.style.transform;
 
-    //add click function here
     for (var i = 0; i < links.length; i++) {
       if (i == hli_num) {
         document.getElementById("matter" + i).style.display = "block";
